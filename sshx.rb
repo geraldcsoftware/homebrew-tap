@@ -5,21 +5,21 @@
 class Sshx < Formula
   desc "SSH helper tool for managing and connecting to servers"
   homepage "https://github.com/geraldcsoftware/sshx"
-  version "0.0.3"
+  version "0.0.4"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/geraldcsoftware/sshx/releases/download/v0.0.3/sshx_Darwin_x86_64.tar.gz"
-      sha256 "38601ae6dc961441ea310b2c3e517c0ce6e666326ccb15b4efe582bc912856b5"
+      url "https://github.com/geraldcsoftware/sshx/releases/download/v0.0.4/sshx_Darwin_x86_64.tar.gz"
+      sha256 "40a917bbf44f529fb830f7e6c99b7cae97e7e5555ca1fd5dabe81e1de15066ba"
 
       def install
         bin.install "sshx"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/geraldcsoftware/sshx/releases/download/v0.0.3/sshx_Darwin_arm64.tar.gz"
-      sha256 "1668945287eb87d52b358e0a635549ad1295b4143850cb0222b748119032d304"
+      url "https://github.com/geraldcsoftware/sshx/releases/download/v0.0.4/sshx_Darwin_arm64.tar.gz"
+      sha256 "7bef0d152cdaa4505da02418f3301a717ccd2714a3ecb9cf9415ba57a2758168"
 
       def install
         bin.install "sshx"
@@ -29,15 +29,15 @@ class Sshx < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/geraldcsoftware/sshx/releases/download/v0.0.3/sshx_Linux_x86_64.tar.gz"
-      sha256 "d7770be7958e8b2d90d9ac3ee7b24684e30dfacb80032cffd924b322d273b01c"
+      url "https://github.com/geraldcsoftware/sshx/releases/download/v0.0.4/sshx_Linux_x86_64.tar.gz"
+      sha256 "69f916c7b421e4814c9f523162042c641f5cef7d2776c00640afe87bb997d46d"
       def install
         bin.install "sshx"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/geraldcsoftware/sshx/releases/download/v0.0.3/sshx_Linux_arm64.tar.gz"
-      sha256 "1ab4fe604e098d24b3e638269b5628e0d099fd4941d18d3e93b56b5889939f4d"
+      url "https://github.com/geraldcsoftware/sshx/releases/download/v0.0.4/sshx_Linux_arm64.tar.gz"
+      sha256 "4931a481e2b400907a82e8fb62a77f17ae906b0913bab82fb801a6fd663636c2"
       def install
         bin.install "sshx"
       end
