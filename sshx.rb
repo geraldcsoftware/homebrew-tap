@@ -5,23 +5,23 @@
 class Sshx < Formula
   desc "SSH helper tool for managing and connecting to servers"
   homepage "https://github.com/geraldcsoftware/sshx"
-  version "0.0.4"
+  version "0.0.5"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/geraldcsoftware/sshx/releases/download/v0.0.4/sshx_Darwin_x86_64.tar.gz"
-      sha256 "40a917bbf44f529fb830f7e6c99b7cae97e7e5555ca1fd5dabe81e1de15066ba"
+      url "https://github.com/geraldcsoftware/sshx/releases/download/v0.0.5/sshx_Darwin_x86_64.tar.gz"
+      sha256 "f4a042b47a2b53a5a864e35cb3599652f5d3a73e869e19e7e4fc27eafebff840"
 
-      def install
+      define_method(:install) do
         bin.install "sshx"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/geraldcsoftware/sshx/releases/download/v0.0.4/sshx_Darwin_arm64.tar.gz"
-      sha256 "7bef0d152cdaa4505da02418f3301a717ccd2714a3ecb9cf9415ba57a2758168"
+      url "https://github.com/geraldcsoftware/sshx/releases/download/v0.0.5/sshx_Darwin_arm64.tar.gz"
+      sha256 "871e1c147a88d51d411040020d2ec767c688f8484e7782e9a0d7b72608db844e"
 
-      def install
+      define_method(:install) do
         bin.install "sshx"
       end
     end
@@ -29,16 +29,16 @@ class Sshx < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/geraldcsoftware/sshx/releases/download/v0.0.4/sshx_Linux_x86_64.tar.gz"
-      sha256 "69f916c7b421e4814c9f523162042c641f5cef7d2776c00640afe87bb997d46d"
-      def install
+      url "https://github.com/geraldcsoftware/sshx/releases/download/v0.0.5/sshx_Linux_x86_64.tar.gz"
+      sha256 "3e8d7f17544e286aaa8f38a380b2660d75db80234d5cc633f41ca6118634cfce"
+      define_method(:install) do
         bin.install "sshx"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/geraldcsoftware/sshx/releases/download/v0.0.4/sshx_Linux_arm64.tar.gz"
-      sha256 "4931a481e2b400907a82e8fb62a77f17ae906b0913bab82fb801a6fd663636c2"
-      def install
+      url "https://github.com/geraldcsoftware/sshx/releases/download/v0.0.5/sshx_Linux_arm64.tar.gz"
+      sha256 "1d95e632cc88166e3e5e786bb63153510b8fb3e7c141fb4499403d25836dc1cb"
+      define_method(:install) do
         bin.install "sshx"
       end
     end
