@@ -5,21 +5,21 @@
 class Space < Formula
   desc "Multi-repo workspace manager for git worktrees"
   homepage "https://github.com/geraldcsoftware/workspace-cli"
-  version "0.1.2"
+  version "0.2.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/geraldcsoftware/workspace-cli/releases/download/v0.1.2/space_0.1.2_darwin_amd64.tar.gz"
-      sha256 "010f246e5f824fbac5f988f189b95c36d9d0927266793e3037b689f6ed7f2110"
+      url "https://github.com/geraldcsoftware/workspace-cli/releases/download/v0.2.0/space_0.2.0_darwin_amd64.tar.gz"
+      sha256 "0fa4b664a0d1e92d4fccef13501aa4b2e39014f2accd1880168e572423f710c8"
 
       define_method(:install) do
         bin.install "space"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/geraldcsoftware/workspace-cli/releases/download/v0.1.2/space_0.1.2_darwin_arm64.tar.gz"
-      sha256 "385ab7715712915fe7f8e6b984d2d2fd1b2690fe560306b33f1c3a549c1e8f48"
+      url "https://github.com/geraldcsoftware/workspace-cli/releases/download/v0.2.0/space_0.2.0_darwin_arm64.tar.gz"
+      sha256 "b100dc36ae78cced8a07386ac6fd1b6bdd9a149b59b4dfa548ebffbe91b498a0"
 
       define_method(:install) do
         bin.install "space"
@@ -29,15 +29,15 @@ class Space < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/geraldcsoftware/workspace-cli/releases/download/v0.1.2/space_0.1.2_linux_amd64.tar.gz"
-      sha256 "048dd0f07c1845fcb3f0a5f0d7b01c78cb9cb37051d5914a2f00b37afd7b1a28"
+      url "https://github.com/geraldcsoftware/workspace-cli/releases/download/v0.2.0/space_0.2.0_linux_amd64.tar.gz"
+      sha256 "edc8339e96d5a37bcf8a42cf852fe76aa557c77da8b531d925f098bfec5d3641"
       define_method(:install) do
         bin.install "space"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/geraldcsoftware/workspace-cli/releases/download/v0.1.2/space_0.1.2_linux_arm64.tar.gz"
-      sha256 "45351283cbcc781a0fbef37a8ef11322713f1552b1c51bef623f9045e9b94a9b"
+      url "https://github.com/geraldcsoftware/workspace-cli/releases/download/v0.2.0/space_0.2.0_linux_arm64.tar.gz"
+      sha256 "a8bec664ab87d6f6fc1f4f355bb90c537707fe9efd22996621493b44cf104e2e"
       define_method(:install) do
         bin.install "space"
       end
