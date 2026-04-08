@@ -5,20 +5,20 @@
 class Playbook < Formula
   desc "CLI tool for running Ansible playbooks"
   homepage "https://github.com/geraldcsoftware/playbook"
-  version "0.2.0"
+  version "0.2.1"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/geraldcsoftware/playbook/releases/download/v0.2.0/playbook_darwin_amd64.tar.gz"
-      sha256 "f549cefcd15c9fda855bf976b99e603595beaf7c4e60d6ecc3fbca147c1fc269"
+      url "https://github.com/geraldcsoftware/playbook/releases/download/v0.2.1/playbook_darwin_amd64.tar.gz"
+      sha256 "bb69d2484c88102077501d969e94662e388f9bf18f3a9d8c5e374fb748dd4475"
 
       define_method(:install) do
         bin.install "playbook"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/geraldcsoftware/playbook/releases/download/v0.2.0/playbook_darwin_arm64.tar.gz"
-      sha256 "8b30bd198c7312759b11dc368ec093c42a742cf5e74b749c28889c2cab53d133"
+      url "https://github.com/geraldcsoftware/playbook/releases/download/v0.2.1/playbook_darwin_arm64.tar.gz"
+      sha256 "91808e49f99e4a91decd6b0833cadfe43dff052cd3cd1d7e0d4e5af2b694bf52"
 
       define_method(:install) do
         bin.install "playbook"
@@ -28,15 +28,15 @@ class Playbook < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/geraldcsoftware/playbook/releases/download/v0.2.0/playbook_linux_amd64.tar.gz"
-      sha256 "d525113bd217c7fbeb48fa6fb2832f557d4bf22de0fcf81c93e17b4812c46e93"
+      url "https://github.com/geraldcsoftware/playbook/releases/download/v0.2.1/playbook_linux_amd64.tar.gz"
+      sha256 "a4511fe024129c63f3ddd81c9a85fe61c947839f0c7c450bcf2aad62c75d101f"
       define_method(:install) do
         bin.install "playbook"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/geraldcsoftware/playbook/releases/download/v0.2.0/playbook_linux_arm64.tar.gz"
-      sha256 "fa1bc4118918ad7d2f2af79866c1e3e895e517aa570a757d2315f2d8af59a517"
+      url "https://github.com/geraldcsoftware/playbook/releases/download/v0.2.1/playbook_linux_arm64.tar.gz"
+      sha256 "9b2385383aaa109c5fe319064b4ed98d4cc4f167ea0b5a2a370ae1643b96680c"
       define_method(:install) do
         bin.install "playbook"
       end
