@@ -5,21 +5,21 @@
 class GitlabStats < Formula
   desc "Beautiful interactive terminal UI for viewing your GitLab activity statistics"
   homepage "https://github.com/geraldcsoftware/git-stats"
-  version "0.2.0"
+  version "0.2.1"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/geraldcsoftware/gitlab-stats/releases/download/v0.2.0/gitlab-stats_darwin_amd64.tar.gz"
-      sha256 "f5063244211302a54ef37cc36108ae6c6b8dd147c50d94099579fd0ea5403905"
+      url "https://github.com/geraldcsoftware/gitlab-stats/releases/download/v0.2.1/gitlab-stats_darwin_amd64.tar.gz"
+      sha256 "9e47ec87fc38f88f4716f2e55f019c6640c87590dcd0a794b71ca3e3b442e888"
 
       define_method(:install) do
         bin.install "gitlab-stats"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/geraldcsoftware/gitlab-stats/releases/download/v0.2.0/gitlab-stats_darwin_arm64.tar.gz"
-      sha256 "7636f70827ea941cecb5cd2c76521c4057cb284ed3159e0f236719b33aaa6135"
+      url "https://github.com/geraldcsoftware/gitlab-stats/releases/download/v0.2.1/gitlab-stats_darwin_arm64.tar.gz"
+      sha256 "0b8ec24ca8003d7c58384abd7919e7f0ba5af3d5b497ef11ced0920a65664df8"
 
       define_method(:install) do
         bin.install "gitlab-stats"
@@ -29,15 +29,15 @@ class GitlabStats < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/geraldcsoftware/gitlab-stats/releases/download/v0.2.0/gitlab-stats_linux_amd64.tar.gz"
-      sha256 "6e669990f51bb5cdd9d73a791e50ea2bbd0d7800e4dac5ec26b6a355e4a5710e"
+      url "https://github.com/geraldcsoftware/gitlab-stats/releases/download/v0.2.1/gitlab-stats_linux_amd64.tar.gz"
+      sha256 "09fc7c317b9736070d999fc12c4303c8f709e78e4493a66d6e53226db2b5d752"
       define_method(:install) do
         bin.install "gitlab-stats"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/geraldcsoftware/gitlab-stats/releases/download/v0.2.0/gitlab-stats_linux_arm64.tar.gz"
-      sha256 "6d7a5ecef11d8863a0939e6218c4555245cca88c1ed20d278d549b47be362751"
+      url "https://github.com/geraldcsoftware/gitlab-stats/releases/download/v0.2.1/gitlab-stats_linux_arm64.tar.gz"
+      sha256 "fa87dc148571df21f3c1226140141b291e94d815a868ccfdc39c20df355e34ee"
       define_method(:install) do
         bin.install "gitlab-stats"
       end
