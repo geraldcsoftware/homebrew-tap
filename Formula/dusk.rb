@@ -5,30 +5,32 @@
 class Dusk < Formula
   desc "Disk usage keeper for macOS: free space alerts and directory size limits"
   homepage "https://github.com/geraldcsoftware/disk-usage-cli"
-  version "0.1.1"
+  version "0.1.2"
   license "MIT"
 
   depends_on "terminal-notifier"
   depends_on :macos
 
   if Hardware::CPU.intel?
-    url "https://github.com/geraldcsoftware/disk-usage-cli/releases/download/v0.1.1/dusk_0.1.1_darwin_amd64.tar.gz"
-    sha256 "936abf79635f21386fcc93e0147bdacb55e8991f12e9da95944dae84602d82f2"
+    url "https://github.com/geraldcsoftware/disk-usage-cli/releases/download/v0.1.2/dusk_0.1.2_darwin_amd64.tar.gz"
+    sha256 "6d1a24159e32e074ab732b55069200cd1f507f40833617e4763df76e840324fd"
 
     define_method(:install) do
       bin.install "dusk"
     end
   end
   if Hardware::CPU.arm?
-    url "https://github.com/geraldcsoftware/disk-usage-cli/releases/download/v0.1.1/dusk_0.1.1_darwin_arm64.tar.gz"
-    sha256 "bb7ca1d8a7e6b5b13802f6dc19328f731a22bf4b79198659ff33c4e205493277"
+    url "https://github.com/geraldcsoftware/disk-usage-cli/releases/download/v0.1.2/dusk_0.1.2_darwin_arm64.tar.gz"
+    sha256 "d0a8397974f5729959077586f6a1ec827a080de6546c9762aeced468b93e4b1d"
 
     define_method(:install) do
       bin.install "dusk"
     end
   end
 
-  depends_on macos: :tahoe
+  on_macos do
+    depends_on macos: :tahoe
+  end
 
   test do
     system "#{bin}/dusk", "version"
