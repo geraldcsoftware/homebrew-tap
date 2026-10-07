@@ -5,26 +5,28 @@
 class Dusk < Formula
   desc "Disk usage keeper for macOS: free space alerts and directory size limits"
   homepage "https://github.com/geraldcsoftware/disk-usage-cli"
-  version "0.1.2"
+  version "0.1.3"
   license "MIT"
 
   depends_on "terminal-notifier"
   depends_on :macos
 
   if Hardware::CPU.intel?
-    url "https://github.com/geraldcsoftware/disk-usage-cli/releases/download/v0.1.2/dusk_0.1.2_darwin_amd64.tar.gz"
-    sha256 "6d1a24159e32e074ab732b55069200cd1f507f40833617e4763df76e840324fd"
+    url "https://github.com/geraldcsoftware/disk-usage-cli/releases/download/v0.1.3/dusk_0.1.3_darwin_amd64.tar.gz"
+    sha256 "7d818668a51ad7c034d03ce53fd21f1d9e3d032c0f4bd0a9e1b6476c5a2d3fcd"
 
     define_method(:install) do
       bin.install "dusk"
+      generate_completions_from_executable(bin/"dusk", shell_parameter_format: :cobra)
     end
   end
   if Hardware::CPU.arm?
-    url "https://github.com/geraldcsoftware/disk-usage-cli/releases/download/v0.1.2/dusk_0.1.2_darwin_arm64.tar.gz"
-    sha256 "d0a8397974f5729959077586f6a1ec827a080de6546c9762aeced468b93e4b1d"
+    url "https://github.com/geraldcsoftware/disk-usage-cli/releases/download/v0.1.3/dusk_0.1.3_darwin_arm64.tar.gz"
+    sha256 "fe61c3e971419121e3d0785b63c339e4259e3052b53843fbd87f2df01a98e31c"
 
     define_method(:install) do
       bin.install "dusk"
+      generate_completions_from_executable(bin/"dusk", shell_parameter_format: :cobra)
     end
   end
 
