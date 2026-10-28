@@ -5,12 +5,12 @@
 class DbQuery < Formula
   desc "Run SQL against configured hosts via native database clients"
   homepage "https://github.com/geraldcsoftware/db-query"
-  version "0.13.0"
+  version "0.14.0"
   depends_on :macos
 
   if Hardware::CPU.intel?
-    url "https://github.com/geraldcsoftware/db-query/releases/download/v0.13.0/db-query_0.13.0_darwin_amd64.tar.gz"
-    sha256 "ee23e64f0265ffd4f9271d4d2515cf44b1e12ff026f1f31b9bd6ba040ef122c0"
+    url "https://github.com/geraldcsoftware/db-query/releases/download/v0.14.0/db-query_0.14.0_darwin_amd64.tar.gz"
+    sha256 "53bce6933cd82a1ef2041caca35e5425dc5e0a61c35e4e679269edb5a2ff386c"
 
     define_method(:install) do
       bin.install "db-query"
@@ -18,8 +18,8 @@ class DbQuery < Formula
     end
   end
   if Hardware::CPU.arm?
-    url "https://github.com/geraldcsoftware/db-query/releases/download/v0.13.0/db-query_0.13.0_darwin_arm64.tar.gz"
-    sha256 "5171551681514eb3a4654caa258004be5d557b63356e4dff8c3e31e8edc3d45e"
+    url "https://github.com/geraldcsoftware/db-query/releases/download/v0.14.0/db-query_0.14.0_darwin_arm64.tar.gz"
+    sha256 "e673a2e9e7472f93198d30a022ebb524113e0f024b66ce06e5d84c342e9257ad"
 
     define_method(:install) do
       bin.install "db-query"
